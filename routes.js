@@ -11,7 +11,14 @@ const {authenticateUser} = require("./middleware/auth-user");
 //return all properties and values for the currently authenticated User
 //return 200 HTTP status code
 router.get('/users', authenticateUser, asyncHandler( async (req, res)=>{
-    res.status(200).json(req.currentUser);
+    const user = req.currentUser;
+
+    res.status(200).json({
+        firstName: user.firstName,
+        lastName: user.lastName,
+        emailAddress: user.emailAddress,
+        teacher: user.teacher
+    });
 }))
 
 //POST route '/api/users'
@@ -19,9 +26,18 @@ router.get('/users', authenticateUser, asyncHandler( async (req, res)=>{
 //set Location header to '/'
 //return 201 HTTP status code and no content
 router.post('/users', authenticateUser, asyncHandler( async (req,res) => {
-    console.log(req.body);
-    await User.create(req.body);
-    res.status(201).location('/').json({});
+    try{
+        await User.create(req.body);
+        res.status(201).location('/').json({});
+    } catch (error) {
+        if (error.name === 'SequelizeValidationError' || error.name === 'SequelizeUniqueConstraintError') {
+            const errors = error.errors.map(err => err.message);
+            res.status(400).json({ errors });
+        } else {
+            throw error;
+        }
+    }
+
 }))
 
 

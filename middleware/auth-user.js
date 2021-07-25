@@ -28,7 +28,10 @@ exports.authenticateUser = async (req, res, next) => {
                     model: Course,
                     as: 'teacher'
                 }
-            ]
+            ],
+            attributes: {
+                exclude: ['createdAt', 'updatedAt']
+            }
         })
 
         // If a user was successfully retrieved from the data store...
