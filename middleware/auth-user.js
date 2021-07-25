@@ -1,6 +1,6 @@
 'use strict';
 const bcrypt = require('bcrypt');
-const { User } = require('../models');
+const { User, Course } = require('../models');
 
 // Middleware to authenticate the request using Basic Authentication.
 exports.authenticateUser = async (req, res, next) => {
@@ -22,7 +22,13 @@ exports.authenticateUser = async (req, res, next) => {
         const user = await User.findOne({
             where:{
                 emailAddress: credentials.email
-            }
+            },
+            include: [
+                {
+                    model: Course,
+                    as: 'teacher'
+                }
+            ]
         })
 
         // If a user was successfully retrieved from the data store...

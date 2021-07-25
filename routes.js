@@ -11,8 +11,7 @@ const {authenticateUser} = require("./middleware/auth-user");
 //return all properties and values for the currently authenticated User
 //return 200 HTTP status code
 router.get('/users', authenticateUser, asyncHandler( async (req, res)=>{
-    let users = await User.findAll();
-    res.json(users);
+    res.json(req.currentUser);
 }))
 
 
