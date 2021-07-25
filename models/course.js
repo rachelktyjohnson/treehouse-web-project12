@@ -4,8 +4,30 @@ module.exports = (sequelize) => {
     class Course extends Model{}
 
     Course.init({
-        title: DataTypes.STRING,
-        description: DataTypes.TEXT,
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                notEmpty: {
+                    msg: "title cannot be empty",
+                },
+                notNull: {
+                    msg: "title field must exist"
+                }
+            }
+        },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                notEmpty: {
+                    msg: "description cannot be empty",
+                },
+                notNull: {
+                    msg: "description field must exist"
+                }
+            }
+        },
         estimatedTime: DataTypes.STRING,
         materialsNeeded: DataTypes.STRING
     }, {sequelize})
