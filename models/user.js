@@ -6,7 +6,18 @@ module.exports = (sequelize) => {
     User.init({
         firstName: DataTypes.STRING,
         lastName: DataTypes.STRING,
-        emailAddress: DataTypes.STRING,
+        emailAddress: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: {
+                msg: "Email is already in use"
+            },
+            validate: {
+                isEmail:{
+                    msg: "Email is not a valid email"
+                }
+            }
+        },
         password: DataTypes.STRING
     }, {sequelize})
 
