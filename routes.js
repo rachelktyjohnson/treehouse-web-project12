@@ -61,7 +61,10 @@ router.get('/courses/:id', asyncHandler(async(req,res)=>{
                 as: 'teacher',
                 attributes: ['firstName', 'lastName', 'emailAddress']
             }
-        ]
+        ],
+        attributes: {
+            exclude: ['createdAt', 'updatedAt']
+        }
     });
     res.status(200).json(course);
 }))
@@ -108,7 +111,7 @@ router.put('/courses/:id', authenticateUser, asyncHandler( async (req,res) => {
 router.delete('/courses/:id', authenticateUser, asyncHandler(async (req,res,)=>{
     let course = await Course.findByPk(req.params.id);
     const user = req.currentUser;
-    if (course.userid !== user.id){
+    if (course.userId !== user.id){
         res.status(403).json({
             error: "User is nt the owner of the course"
         })
