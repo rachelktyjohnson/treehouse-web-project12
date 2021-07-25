@@ -7,9 +7,6 @@ const {authenticateUser} = require("./middleware/auth-user");
 
 ////////////////////// USER ROUTES //////////////////////
 
-//GET route '/api/users'
-//return all properties and values for the currently authenticated User
-//return 200 HTTP status code
 router.get('/users', authenticateUser, asyncHandler( async (req, res)=>{
     const user = req.currentUser;
 
@@ -21,10 +18,6 @@ router.get('/users', authenticateUser, asyncHandler( async (req, res)=>{
     });
 }))
 
-//POST route '/api/users'
-//create a new user
-//set Location header to '/'
-//return 201 HTTP status code and no content
 router.post('/users', authenticateUser, asyncHandler( async (req,res) => {
     try{
         await User.create(req.body);
@@ -43,10 +36,62 @@ router.post('/users', authenticateUser, asyncHandler( async (req,res) => {
 
 ////////////////////// COURSE ROUTES //////////////////////
 
+router.get('/courses', asyncHandler(async(req,res)=>{
+    let courses = await Course.findAll({
+        include:[
+            {
+                model: User,
+                as: 'teacher',
+                attributes: ['firstName', 'lastName', 'emailAddress']
+            }
+        ],
+        attributes: {
+            exclude: ['createdAt', 'updatedAt']
+        }
+    });
+    res.status(200).json(courses);
+}))
 
+router.get('/courses/:id', asyncHandler(async(req,res)=>{
+    let course = await Course.findByPk(req.params.id, {
+        include: [
+            {
+                model: User,
+                as: 'teacher',
+                attributes: ['firstName', 'lastName', 'emailAddress']
+            }
+        ]
+    });
+    res.status(200).json(course);
+}))
 
+router.post('/courses', authenticateUser, asyncHandler(async (req,res)=> {
+    let course = await Course.create(req.body);
+    res.status(201)
+        .location(`/courses/${course.id}`)
+        .json({})
+}))
 
+router.put('/courses/:id', authenticateUser, asyncHandler( async (req,res) => {
+    let course = await Course.findByPk(req.params.id);
+    if (req.body.title){
+        course.title = req.body.title;
+    }
+    if (req.body.description){
+        course.description = req.body.description;
+    }
+    if (req.body.userId){
+        course.userId = req.body.userId;
+    }
+    await course.save();
+    res.status(204).json({});
+}))
 
+router.delete('/courses/:id', authenticateUser, asyncHandler(async (req,res,)=>{
+    let course = await Course.findByPk(req.params.id);
+    await course.destroy();
+    res.status(204).json({})
+}))
 
 
 

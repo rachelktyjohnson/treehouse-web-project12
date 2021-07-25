@@ -26,7 +26,8 @@ exports.authenticateUser = async (req, res, next) => {
             include: [
                 {
                     model: Course,
-                    as: 'teacher'
+                    as: 'teacher',
+                    attributes: ['title', 'description', 'estimatedTime', 'materialsNeeded']
                 }
             ],
             attributes: {

@@ -10,7 +10,7 @@ module.exports = (sequelize) => {
         materialsNeeded: DataTypes.STRING
     }, {sequelize})
 
-    Course.assosicate = (models) => {
+    Course.associate = (models) => {
         Course.belongsTo(models.User, {
             as: 'teacher',
             foreignKey: {

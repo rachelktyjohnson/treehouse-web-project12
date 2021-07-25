@@ -127,7 +127,7 @@ Content-Type: application/json
 }
 
 
-# Tests for the Permissions section of the rubric
+### Tests for the Permissions section of the rubric
 
 ### Get User (No Auth)
 GET http://localhost:5000/api/users HTTP/1.1
