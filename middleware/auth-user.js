@@ -1,5 +1,6 @@
 'use strict';
 const bcrypt = require('bcrypt');
+const auth = require('basic-auth');
 const { User, Course } = require('../models');
 
 // Middleware to authenticate the request using Basic Authentication.
@@ -7,13 +8,17 @@ exports.authenticateUser = async (req, res, next) => {
 
     let message;
     if (req.headers.authorization) {
-
-        // Parse the user's credentials from the Authorization header.
-        const headers = req.headers.authorization.substring(6);
-        const header_arr = headers.split(":");
-        let credentials = {};
-        credentials.email = header_arr[0];
-        credentials.pass = header_arr[1];
+        let credentials;
+        if (req.headers.authorization.includes(':')){
+            const headers = req.headers.authorization.substring(6);
+            const header_arr = headers.split(":");
+            credentials = {};
+            credentials.name = header_arr[0];
+            credentials.pass = header_arr[1];
+        } else {
+            // Parse the user's credentials from the Authorization header.
+            credentials = auth(req);
+        }
 
 
         // If the user's credentials are available...
@@ -23,7 +28,7 @@ exports.authenticateUser = async (req, res, next) => {
         if (credentials) {
             const user = await User.findOne({
                 where: {
-                    emailAddress: credentials.email
+                    emailAddress: credentials.name
                 },
                 include: [
                     {
@@ -54,7 +59,7 @@ exports.authenticateUser = async (req, res, next) => {
                     message = `Authentication failure for email: ${user.emailAddress}`;
                 }
             } else {
-                message = `User not found for email: ${credentials.email}`;
+                message = `User not found for email: ${credentials.name}`;
             }
         } else {
             message = "Auth header not found";

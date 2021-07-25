@@ -1,3 +1,201 @@
+PUT http://localhost:5000/api/courses/1
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
+
+<> 2021-07-25T211935.401.json
+
+###
+
+POST http://localhost:5000/api/courses
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T211933.401.json
+
+###
+
+GET http://localhost:5000/api/users
+
+<> 2021-07-25T211927.401.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "firstName": "Sam",
+  "lastName": "Smith",
+  "emailAddress": "sam.com",
+  "password": "password"
+}
+
+<> 2021-07-25T211910.400.json
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
+
+<> 2021-07-25T211903.400.json
+
+###
+
+POST http://localhost:5000/api/courses
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T211858.400.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T211853.400.json
+
+###
+
+DELETE http://localhost:5000/api/courses/3
+Authorization: Basic joe@smith.com:joepassword
+
+<> 2021-07-25T211849.403.json
+
+###
+
+PUT http://localhost:5000/api/courses/3
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+	"id": 3,
+  "title": "Updated course!",
+  "description": "The course description has been updated as well.",
+  "userId": 1
+}
+
+<> 2021-07-25T211845.403.json
+
+###
+
+DELETE http://localhost:5000/api/courses/4
+Authorization: Basic joe@smith.com:joepassword
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+	"id": 1,
+  "title": "Updated course!",
+  "description": "The course description has been updated as well.",
+  "userId": 1
+}
+
+###
+
+POST http://localhost:5000/api/courses
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "title": "My new course",
+  "description": "This is the course I created",
+  "userId": 1
+}
+
+<> 2021-07-25T211812.201.json
+
+###
+
+GET http://localhost:5000/api/courses/1
+
+<> 2021-07-25T211800.200.json
+
+###
+
+GET http://localhost:5000/api/courses
+
+<> 2021-07-25T211755.200.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "firstName": "Joe",
+  "lastName": "Smith",
+  "emailAddress": "joe@smith.com",
+  "password": "password"
+}
+
+<> 2021-07-25T211749.400.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "emailAddress": "john23@smith.com",
+  "password": "password"
+}
+
+<> 2021-07-25T211717.201.json
+
+###
+
+GET http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+
+<> 2021-07-25T211707.200.json
+
+###
+
+GET http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+
+<> 2021-07-25T211539.200.json
+
+###
+
+GET http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+
+<> 2021-07-25T211032.401.json
+
+###
+
 DELETE http://localhost:5000/api/courses/1
 
 <> 2021-07-25T210356.401.json
@@ -311,213 +509,6 @@ Content-Type: application/json
 }
 
 <> 2021-07-25T205629-2.400.json
-
-###
-
-POST http://localhost:5000/api/courses
-Authorization: Basic joe@smith.com:joepassword
-Content-Type: application/json
-
-{
-
-}
-
-<> 2021-07-25T205629-1.400.json
-
-###
-
-POST http://localhost:5000/api/users
-Authorization: Basic joe@smith.com:joepassword
-Content-Type: application/json
-
-{
-
-}
-
-<> 2021-07-25T205629.400.json
-
-###
-
-DELETE http://localhost:5000/api/courses/3
-Authorization: Basic joe@smith.com:joepassword
-
-<> 2021-07-25T205629-2.403.json
-
-###
-
-PUT http://localhost:5000/api/courses/3
-Authorization: Basic joe@smith.com:joepassword
-Content-Type: application/json
-
-{
-	"id": 3,
-  "title": "Updated course!",
-  "description": "The course description has been updated as well.",
-  "userId": 1
-}
-
-<> 2021-07-25T205629-1.403.json
-
-###
-
-DELETE http://localhost:5000/api/courses/4
-Authorization: Basic joe@smith.com:joepassword
-
-<> 2021-07-25T205629.403.json
-
-###
-
-PUT http://localhost:5000/api/courses/1
-Authorization: Basic joe@smith.com:joepassword
-Content-Type: application/json
-
-{
-	"id": 1,
-  "title": "Updated course!",
-  "description": "The course description has been updated as well.",
-  "userId": 1
-}
-
-###
-
-POST http://localhost:5000/api/courses
-Authorization: Basic joe@smith.com:joepassword
-Content-Type: application/json
-
-{
-  "title": "My new course",
-  "description": "This is the course I created",
-  "userId": 1
-}
-
-<> 2021-07-25T205629.201.json
-
-###
-
-GET http://localhost:5000/api/courses/1
-
-<> 2021-07-25T205628-2.200.json
-
-###
-
-GET http://localhost:5000/api/courses
-
-<> 2021-07-25T205628-1.200.json
-
-###
-
-POST http://localhost:5000/api/users
-Authorization: Basic joe@smith.com:joepassword
-Content-Type: application/json
-
-{
-  "firstName": "Joe",
-  "lastName": "Smith",
-  "emailAddress": "joe@smith.com",
-  "password": "password"
-}
-
-<> 2021-07-25T205628.400.json
-
-###
-
-POST http://localhost:5000/api/users
-Authorization: Basic joe@smith.com:joepassword
-Content-Type: application/json
-
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "emailAddress": "john23@smith.com",
-  "password": "password"
-}
-
-<> 2021-07-25T205628.201.json
-
-###
-
-GET http://localhost:5000/api/users
-Authorization: Basic joe@smith.com:joepassword
-
-<> 2021-07-25T205628.200.json
-
-###
-
-POST http://localhost:5000/api/users
-Authorization: Basic joe@smith.com:joepassword
-Content-Type: application/json
-
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "emailAddress": "john23@smith.com",
-  "password": "password"
-}
-
-<> 2021-07-25T205604.400.json
-
-###
-
-DELETE http://localhost:5000/api/courses/1
-
-<> 2021-07-25T205527-3.401.json
-
-###
-
-PUT http://localhost:5000/api/courses/1
-Content-Type: application/json
-
-{
-  "title": "",
-  "description": ""
-}
-
-<> 2021-07-25T205527-2.401.json
-
-###
-
-POST http://localhost:5000/api/courses
-Content-Type: application/json
-
-{
-
-}
-
-<> 2021-07-25T205527-1.401.json
-
-###
-
-GET http://localhost:5000/api/users
-
-<> 2021-07-25T205527.401.json
-
-###
-
-POST http://localhost:5000/api/users
-Authorization: Basic joe@smith.com:joepassword
-Content-Type: application/json
-
-{
-  "firstName": "Sam",
-  "lastName": "Smith",
-  "emailAddress": "sam.com",
-  "password": "password"
-}
-
-<> 2021-07-25T205527-3.400.json
-
-###
-
-PUT http://localhost:5000/api/courses/1
-Authorization: Basic joe@smith.com:joepassword
-Content-Type: application/json
-
-{
-  "title": "",
-  "description": ""
-}
-
-<> 2021-07-25T205527-2.400.json
 
 ###
 
