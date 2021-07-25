@@ -1,0 +1,538 @@
+DELETE http://localhost:5000/api/courses/1
+
+<> 2021-07-25T203423.401.json
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
+
+<> 2021-07-25T203420.401.json
+
+###
+
+POST http://localhost:5000/api/courses
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T203411.401.json
+
+###
+
+GET http://localhost:5000/api/users
+
+<> 2021-07-25T203407.401.json
+
+###
+
+GET http://localhost:5000/api/users
+
+<> 2021-07-25T203342.500.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "firstName": "Joe",
+  "lastName": "Smith",
+  "emailAddress": "joe@smith.com",
+  "password": "password"
+}
+
+<> 2021-07-25T203008.400.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "emailAddress": "john23@smith.com",
+  "password": "password"
+}
+
+<> 2021-07-25T203002.201.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "emailAddress": "john23@smith.com",
+  "password": "password"
+}
+
+<> 2021-07-25T202946.500.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "emailAddress": "john23@smith.com",
+  "password": "password"
+}
+
+<> 2021-07-25T202831.500.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T202822.400.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T202800.400.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T201555.500.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "firstName": "Sam",
+  "lastName": "Smith",
+  "emailAddress": "sam.com",
+  "password": "password"
+}
+
+<> 2021-07-25T201549.400.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "firstName": "Sam",
+  "lastName": "Smith",
+  "emailAddress": "sam.com",
+  "password": "password"
+}
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+	"id": 1,
+  "title": "Updated course!",
+  "description": "The course description has been updated as well.",
+  "userId": 1
+}
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "firstName": "Sam",
+  "lastName": "Smith",
+  "emailAddress": "sam.com",
+  "password": "password"
+}
+
+<> 2021-07-25T200558.400.json
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
+
+<> 2021-07-25T200551.400.json
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
+
+###
+
+PUT http://localhost:5000/api/courses/1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
+
+###
+
+POST http://localhost:5000/api/courses
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T195829.400.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T195827.400.json
+
+###
+
+POST http://localhost:5000/api/courses
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T195618.500.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T195612.400.json
+
+###
+
+POST http://localhost:5000/api/courses
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T195517.500.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T194757.400.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T194543.400.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T191933.400.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T191911.400.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
+
+<> 2021-07-25T191622.500.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "emailAddress": "john23@smith.com",
+  "password": "password"
+}
+
+<> 2021-07-25T191512.201.json
+
+###
+
+POST http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "firstName": "Joe",
+  "lastName": "Smith",
+  "emailAddress": "joe@smith.com",
+  "password": "password"
+}
+
+<> 2021-07-25T183532.400.json
+
+###
+
+DELETE http://localhost:5000/api/courses/3
+Authorization: Basic joe@smith.com:joepassword
+
+###
+
+GET http://localhost:5000/api/courses/1
+
+<> 2021-07-25T183202.200.json
+
+###
+
+GET http://localhost:5000/api/courses
+
+<> 2021-07-25T183157.200.json
+
+###
+
+GET http://localhost:5000/api/users
+Authorization: Basic joe@smith.com:joepassword
+
+<> 2021-07-25T183149.200.json
+
+###
+
+GET http://localhost:5000/api/courses
+
+<> 2021-07-25T183105.200.json
+
+###
+
+GET http://localhost:5000/api/courses
+
+<> 2021-07-25T183039.200.json
+
+###
+
+GET http://localhost:5000/api/courses
+
+<> 2021-07-25T183015.200.json
+
+###
+
+GET http://localhost:5000/api/courses
+
+<> 2021-07-25T182919.200.json
+
+###
+
+GET http://localhost:5000/api/courses
+
+<> 2021-07-25T182807.200.json
+
+###
+
