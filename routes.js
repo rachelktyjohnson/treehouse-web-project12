@@ -22,7 +22,7 @@ router.get('/users', authenticateUser, asyncHandler( async (req, res)=>{
 router.post('/users', asyncHandler( async (req,res) => {
     try{
         await User.create(req.body);
-        res.status(201).location('/').json({});
+        res.status(201).location('/').end();
     } catch (error) {
         if (error.name === 'SequelizeValidationError' || error.name === 'SequelizeUniqueConstraintError') {
             const errors = error.errors.map(err => err.message);
@@ -74,7 +74,7 @@ router.post('/courses', authenticateUser, asyncHandler(async (req,res)=> {
         let course = await Course.create(req.body);
         res.status(201)
             .location(`/courses/${course.id}`)
-            .json({})
+            .end()
     } catch (error) {
         if (error.name === 'SequelizeValidationError' || error.name === 'SequelizeUniqueConstraintError') {
             const errors = error.errors.map(err => err.message);
@@ -95,7 +95,7 @@ router.put('/courses/:id', authenticateUser, asyncHandler( async (req,res) => {
     } else {
         try {
             await course.update(req.body);
-            res.status(204).json({});
+            res.status(204).end();
         } catch (error) {
             if (error.name === 'SequelizeValidationError' || error.name === 'SequelizeUniqueConstraintError') {
                 const errors = error.errors.map(err => err.message);
@@ -117,7 +117,7 @@ router.delete('/courses/:id', authenticateUser, asyncHandler(async (req,res,)=>{
         })
     } else {
         await course.destroy();
-        res.status(204).json({})
+        res.status(204).end();
     }
 }))
 
